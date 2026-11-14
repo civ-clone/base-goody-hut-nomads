@@ -1,0 +1,42 @@
+{
+  "name": "@civ-clone/base-goody-hut-nomads",
+  "version": "0.1.0",
+  "description": "The Nomads goody-hut action: a unit of the ruleset's settlers type joins the player, with no home city.",
+  "repository": "git@github.com:civ-clone/base-goody-hut-nomads.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "*.ts",
+    "*.js",
+    "*.js.map"
+  ],
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@civ-clone/core-player": "^0.1.10",
+    "@civ-clone/core-world": "^0.1.24",
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "@civ-clone/core-goody-hut": "^0.1.7",
+    "@civ-clone/core-rule": "^0.1.9",
+    "@civ-clone/core-unit": "^0.1.31"
+  }
+}
